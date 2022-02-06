@@ -3,6 +3,8 @@ import pickle
 import os
 import numpy as np
 
+# path = "C:/Users/duong/Desktop/MLOps Capstone Project/Churn Prediction/models/"
+# os.startfile(path)
 
 classifier = pickle.load(open('classifier.pickle', 'rb'))
 scaler = pickle.load(open('sc.pickle', 'rb'))

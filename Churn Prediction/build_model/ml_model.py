@@ -1,3 +1,4 @@
+# import libraries
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -8,8 +9,8 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
 import pickle
 
+# preprocessing data
 training_data = pd.read_csv('churnpredictiondata.csv')
-
 training_data.describe()
 
 X = training_data.iloc[:, :-1].values
@@ -26,7 +27,7 @@ X_test = sc.transform(X_test)
 # minkowski is for ecledian distance
 classifier = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
 
-# Model training
+# model training
 classifier.fit(X_train, y_train)
 
 y_pred = classifier.predict(X_test)
@@ -36,7 +37,7 @@ cm = confusion_matrix(y_test, y_pred)
 print(accuracy_score(y_test,y_pred))
 print(classification_report(y_test,y_pred))
 
-# try some predictions
+# model predictions
 new_prediction = classifier.predict(sc.transform(np.array([[10,200]])))
 new_prediction_proba = classifier.predict_proba(sc.transform(np.array([[40,20000]])))[:,1]
 
