@@ -1,5 +1,5 @@
 ## MLOps Capstone Project
-[![MLOps and System Capstone Project]](https://www.fourthbrain.ai)
+[MLOps and System Capstone Project](https://www.fourthbrain.ai)
 ---
 
 ## Writeup Report / README
