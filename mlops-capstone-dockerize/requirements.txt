@@ -1,0 +1,4 @@
+python3-pip
+Flask
+numpy
+sklearn==0.24.2
